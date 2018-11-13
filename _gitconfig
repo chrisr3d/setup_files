@@ -1,0 +1,5 @@
+[user]
+	email = chris.studer.68@gmail.com
+	signingkey = 6BBED1B63A6D639F
+[core]
+	editor = vim

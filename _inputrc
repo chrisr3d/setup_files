@@ -1,0 +1,50 @@
+# $include /etc/inputrc
+set editing-mode vi
+
+# Adds punctuation as word delimiters
+set bind-tty-special-chars off
+
+# Completion Options
+set page-completions on
+set completion-ignore-case on
+set completion-query-items 200
+set show-all-if-ambiguous on
+set show-all-if-unmodified on
+set visible-stats on
+
+# Useful stuff for UTF-8
+set meta-flag on
+set input-meta on
+set output-meta on
+set convert-meta off
+
+set keymap vi-command
+"gg": beginning-of-history
+"G": end-of-history
+
+set keymap vi-insert
+"\C-l": clear-screen
+"\C-w": backward-kill-word
+"\C-x": kill-word
+# auto-complete from the history
+"\C-p": history-search-backward
+"\C-n": history-search-forward
+"\e[5~": history-search-backward
+"\e[6~": history-search-forward
+# gnome / konsole / others (control + arrow key)
+"\e[1;5C": forward-word
+"\e[1;5D": backward-word
+# Tmux
+"\eOD": backward-word
+"\eOC": forward-word
+# mappings for Ctrl-left-arrow and Ctrl-right-arrow for word moving
+"\e[1;5C": forward-word
+"\e[1;5D": backward-word
+"\e[5C": forward-word
+"\e[5D": backward-word
+"\e\e[C": forward-word
+"\e\e[D": backward-word
+
+# IPython needs this to appear at the bottom of the
+# file for clear-screen to work
+set keymap vi

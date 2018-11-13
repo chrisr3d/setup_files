@@ -1,0 +1,5 @@
+alias letsdostix2='cd /home/chrisr3d/git/MISP/app/files/scripts/stix2'
+alias back2thestix1='cd /home/chrisr3d/git/MISP/app/files/scripts/'
+alias modules4MISP='cd /home/chrisr3d/git/modules4MISP'
+alias ouiladateSVP='date -d "now"'
+alias resetSSH='ssh-keygen -f "/home/chrisr3d/.ssh/known_hosts" -R "[127.0.0.1]:2222"'
