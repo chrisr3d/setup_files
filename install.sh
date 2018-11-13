@@ -1,10 +1,14 @@
 #!/usr/bin/env bash
 
 #Installing some usefull packages
-sudo apt-get install curl vim-gnome screen git tig
+sudo apt-get install curl vim-gnome screen git tig -y
 
 #Installing Pathogen
-curl -Lls https://raw.githubusercontent.com/tpope/vim-pathogen/master/autoload/pathogen.vim > _vim/autoload/pathogen.vim
+dir=_vim/autoload
+if [ ! -d "$dir" ]; then
+    mkdir $dir
+fi
+curl -LSso _vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
 
 #Installing airline
 dir=_vim/bundle/vim-airline
@@ -23,7 +27,7 @@ git clone https://github.com/powerline/fonts.git
 cd fonts/
 ./install.sh
 cd ..
-rm -r fonts
+sudo rm -r fonts
 
 #Installing vim-gitgutter
 dir=_vim/bundle/vim-gitgutter
