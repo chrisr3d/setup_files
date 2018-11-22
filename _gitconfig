@@ -3,3 +3,13 @@
 	signingkey = 6BBED1B63A6D639F
 [core]
 	editor = vim
+[alias]
+        c = commit
+        cs = commit -S
+        csv = commit -S -v
+        csvp = commit -S -v -p
+        #############
+        d = diff
+        #############
+        s = status
+        sb = status -s -b
