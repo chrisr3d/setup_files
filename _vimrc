@@ -44,6 +44,7 @@ let g:airline#extensions#tabline#enabled = 1
 " enable/disable virtualenv integration >
   let g:airline#extensions#virtualenv#enabled = 1
 
+let g:indentLine_char = '¦'
 
 "------------------------------------------------------------
 " Features {{{1
