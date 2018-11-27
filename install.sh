@@ -1,7 +1,8 @@
 #!/usr/bin/env bash
 
 #Installing some usefull packages
-sudo apt-get install curl vim-gnome screen git tig -y
+sudo apt-get install curl vim-gnome screen git tig python3-pip -y
+pip3 install pew
 
 #Installing Pathogen
 dir=_vim/autoload
