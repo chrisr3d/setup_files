@@ -20,7 +20,10 @@
 # SCREEN SETTINGS
 # ------------------------------------------------------------------------------
 
-#startup_message off
+# Always start `screen` with UTF-8 enabled (`screen -U`)
+defutf8 on
+
+startup_message off
 #nethack on
 
 #defflow on # will force screen to process ^S/^Q

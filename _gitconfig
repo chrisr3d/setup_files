@@ -1,15 +1,111 @@
-[user]
-	email = chris.studer.68@gmail.com
-	signingkey = 6BBED1B63A6D639F
 [core]
-	editor = vim
+    editor = vim
+
+    # Treat spaces before tabs and all kinds of trailing whitespace as an error.
+    # [default] trailing-space: looks for spaces at the end of a line
+    # [default] space-before-tab: looks for spaces before tabs at the beginning of a line
+    whitespace = space-before-tab,-indent-with-non-tab,trailing-space
+
+    # Speed up commands involving untracked files such as `git status`.
+    # https://git-scm.com/docs/git-update-index#_untracked_cache
+    untrackedCache = true
+
 [alias]
-        c = commit
-        cs = commit -S
-        csv = commit -S -v
-        csvp = commit -S -v -p
-        #############
-        d = diff
-        #############
-        s = status
-        sb = status -s -b
+    # Clone a repository including all submodules
+    cr = clone --recursive
+
+    # Simple commit
+    c = commit
+    # Signed commit
+    cs = commit -S
+    # Signed commit with verbose diff in commit message template
+    csv = commit -S -v
+    # Signed patch commit with verbose diff in commit message template
+    csvp = commit -S -v -p
+    # Amend the currently staged files to the latest commit.
+    amend = commit --amend --reuse-message=HEAD
+
+    # Diff
+    d = diff
+    # Diff stat
+    ds = diff --stat
+
+    # Pull in remote changes for the current repository and all its submodules.
+    p = pull --recurse-submodules
+
+    # Status
+    s = status
+    # Concise status with branch information
+    sb = status -s -b
+
+    # Show verbose output about tags, branches or remotes
+    tags = tag -l
+    branches = branch --all
+    remotes = remote --verbose
+
+[apply]
+    # Detect whitespace errors when applying a patch
+    whitespace = fix
+
+[branch]
+    # Show most recently changed branches first
+    sort = -committerdate
+
+[color]
+
+    # Use colors in Git commands that are capable of colored output when
+    # outputting to the terminal. (This is the default setting in Git ≥ 1.8.4.)
+    ui = auto
+
+[color "branch"]
+
+    current = red
+    local = yellow
+    remote = green
+
+[color "diff"]
+
+    meta = yellow bold
+    frag = magenta bold # line info
+    old = red # deletions
+    new = green # additions
+
+[color "status"]
+
+    added = yellow
+    changed = green
+    untracked = cyan
+
+[commit]
+    # Sign commits by default
+    gpgSign = true
+
+[diff]
+    # Detect copies as well as renames
+    renames = copies
+
+# URL shorthands
+
+[url "git@github.com:"]
+
+    insteadOf = "gh:"
+    pushInsteadOf = "github:"
+    pushInsteadOf = "git://github.com/"
+
+[url "git://github.com/"]
+
+    insteadOf = "github:"
+
+[url "git@gist.github.com:"]
+
+    insteadOf = "gst:"
+    pushInsteadOf = "gist:"
+    pushInsteadOf = "git://gist.github.com/"
+
+[url "git://gist.github.com/"]
+
+    insteadOf = "gist:"
+
+[init]
+
+    defaultBranch = main

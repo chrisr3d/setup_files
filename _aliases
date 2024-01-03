@@ -1,0 +1,28 @@
+#!/usr/bin/env bash
+
+# Always enable colored `grep` output
+alias grep='ggrep --color=auto'
+alias fgrep='ggrep -F --color=auto'
+alias egrep='ggrep -E --color=auto'
+
+# Putting a slash at the end of directory names
+alias ls='ls -F'
+alias ll='ls -lF'
+
+# Recursively delete `.DS_Store` files
+alias cleanup="find . -type f -name '*.DS_Store' -ls -delete"
+
+# Flush Directory Service cache
+alias flush="dscacheutil -flushcache && killall -HUP mDNSResponder"
+
+# Show process(es) with given names
+alias psg='ps aux | grep -i'
+
+# Show active network interfaces
+alias ifactive="ifconfig | pcregrep -M -o '^[^\t:]+:([^\n]|\n\t)*status: active"
+
+# Get MacOS Software, as well as some brew packages update
+alias update='sudo softwareupdate -i -a; brew update; brew upgrade; brew cleanup; brew autoremove'
+
+# Print each PATH entry on a separate line
+alias path='echo -e ${PATH//:/\\n}'
