@@ -22,7 +22,7 @@ alias psg='ps aux | grep -i'
 alias ifactive="ifconfig | pcre2grep -M -o '^[^\t:]+:([^\n]|\n\t)*status: active'"
 
 # Get MacOS Software, as well as some brew packages update
-alias update='sudo softwareupdate -i -a; brew update; brew upgrade; brew cleanup; brew autoremove'
+alias update='sudo softwareupdate -i -a; brew update; brew upgrade; brew cleanup; brew autoremove; npm install npm -g; npm update -g'
 
 # Print each PATH entry on a separate line
 alias path='echo -e ${PATH//:/\\n}'
