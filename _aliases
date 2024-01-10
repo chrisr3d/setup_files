@@ -26,3 +26,6 @@ alias update='sudo softwareupdate -i -a; brew update; brew upgrade; brew cleanup
 
 # Print each PATH entry on a separate line
 alias path='echo -e ${PATH//:/\\n}'
+
+# Generate a random UUID, as I don't like the `uuidgen` installed on Mac
+alias uuid='python -c "from uuid import uuid4; print(uuid4())"'
