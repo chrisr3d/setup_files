@@ -46,6 +46,7 @@ brew install grep
 brew install screen
 brew install gmp
 brew install pyenv
+brew install ssdeep
 
 # Install other useful binaries
 brew install ack

@@ -5,6 +5,9 @@ alias grep='ggrep --color=auto'
 alias fgrep='ggrep -F --color=auto'
 alias egrep='ggrep -E --color=auto'
 
+alias gnrg='ggrep --color=auto -nrG'
+alias gnrf='ggrep --color=auto -nrF'
+
 # Putting a slash at the end of directory names
 alias ls='ls -F'
 alias ll='ls -lF'
